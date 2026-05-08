@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module defines a Rectangle class.
+"""
+
+
 class Rectangle:
     """Defines a rectangle with private width and height."""
 
@@ -49,10 +54,6 @@ class Rectangle:
         """Return the printable representation of the rectangle with #."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        
+
         rows = ["#" * self.__width for _ in range(self.__height)]
         return "\n".join(rows)
-
-    def __repr__(self):
-        """Return a string representation to recreate the instance."""
-        return f"Rectangle({self.__width}, {self.__height})"
